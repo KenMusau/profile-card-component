@@ -18,9 +18,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url(./images/bg-pattern-top.svg) left top no-repeat,
-    url(./images/bg-pattern-bottom.svg) right bottom no-repeat;
-  background-size: 35%, 35%;
+  background: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 45vw bottom 39vh, left 48vw top 43vh;
   background-color: var(--Dark-cyan);
 }
 
@@ -97,4 +98,10 @@ hr {
   color: var(--Dark-gray);
   font-size: 12px;
   text-align: center;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-position: right 47vw bottom 22vh, left 47vw top 20vh;
+  }
 }
